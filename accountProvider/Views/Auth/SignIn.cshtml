@@ -1,0 +1,50 @@
+﻿@using accountProvider.ViewModels
+@model SignInViewModel
+
+@{
+    ViewData["Title"] = "Sign In";
+}
+<section class="signin">
+    <div class="container">
+        @if(!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
+        {
+            <div class="error-message">
+                @TempData["StatusMessage"]
+            </div>
+        }
+
+        <form method="post" asp-action="SignIn" asp-controller="Auth" novalidate>
+
+            
+            <div class="form-content">
+
+                <div id="form-email" class="input-group">
+                    <label asp-for="Email"></label>
+                    <input id="email" required type="email" asp-for="Email" />
+                    <span id="email-error" asp-validation-for="Email"></span>
+                </div>
+
+
+                <div id="form-password" class="input-group">
+                    <label asp-for="password"></label>
+                    <input id="password" required type="password" asp-for="password" />
+                    <span id="password-error" asp-validation-for="Password"></span>
+                </div>
+
+                <div id="form-checkbox" class="checkbox-group">
+                    <div class="input-group">
+                        <input id="checkbox" type="checkbox" asp-for="RememberMe" />
+                        <label asp-for="RememberMe"></label>
+                    </div>
+                </div>
+
+                <div id="form-button">
+                    <button type="submit" class="btn btn-theme"><i class="fa-regular fa-arrow-left-to-bracket"></i>Sign In</button>
+                </div>
+
+                <a id="form-forgot-password" asp-controller="" asp-action="Forgot">Forgot your password?</a>
+            </div>
+
+        </form>
+    </div>
+</section>
