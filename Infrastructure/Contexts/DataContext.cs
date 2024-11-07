@@ -4,8 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Contexts;
 
-public class DataContext : IdentityDbContext<UserEntity>
+public class DataContext(DbContextOptions<DataContext> options) : IdentityDbContext<UserEntity>(options)
 {
-    public DataContext(DbContextOptions<DataContext> options) : base(options) { }
-
 }
