@@ -54,4 +54,6 @@ public class UserEntityTests
         Assert.Equal("jimmysjo@domain.com", user.Email);
         Assert.Equal("123-456-789", user.PhoneNumber);
     }
+
+
 }
