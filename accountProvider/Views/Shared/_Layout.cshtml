@@ -4,9 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - accountProvider</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/splashScreen.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/onboarding.min.css" asp-append-version="true" />
 </head>
 <body>
-    @RenderBody()
-    <script src="~/js/site.js" asp-append-version="true"></script>
+  @RenderBody()
+    <script src="~/js/splashScreen.js"></script>
+    <script src="~/js/onboarding.js"></script>
+    <script src="https://kit.fontawesome.com/f53f99e76c.js" crossorigin="anonymous"></script>
 </body>
 </html>

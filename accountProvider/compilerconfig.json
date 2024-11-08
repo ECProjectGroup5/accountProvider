@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/splashScreen.css",
+    "inputFile": "wwwroot/css/splashScreen.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/onboarding.css",
+    "inputFile": "wwwroot/css/onboarding.scss"
+  }
+]
