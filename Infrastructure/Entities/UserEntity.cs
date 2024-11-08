@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure.Entities;
 
-/// <summary>
-/// Represents a user entity that adds details to IdentityUser.
-/// </summary>
-/// <remarks>
-/// Contains properties for first name, last name, and a check if the account is external.
-/// /// </remarks>
-public class UserEntity : IdentityUser
+
+public class UserEntity : IdentityUser, IUserEntity
 {
     [ProtectedPersonalData]
     public string FirstName { get; set; } = null!;
